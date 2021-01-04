@@ -12,11 +12,12 @@
 					<h3>{{$produk->nama}}</h3>
 					<hr>
 					<p>
-						Rp.{{number_format($produk->harga)}} |
+						{{$produk->harga_string}} |
 						Stock : {{$produk->stock}} |
-						Berat : {{$produk->berat}} gr |
-						Berat : {{$produk->size}} |
-						Seller : {{$produk->seller->username}}
+						Berat : {{$produk->berat}} kg |
+						Size : {{$produk->size}} |
+						Seller : {{$produk->seller->username}} |
+						Tanggal Produk : {{$produk->created_at->diffForHumans()}}
 					</p>
 					<p>
 						{!! nl2br($produk->deskripsi) !!}

@@ -12,7 +12,8 @@
 					<hr>
 					<p>
 						{{"@".$user->username}} |
-						Email : {{$user->email}}
+						Email : {{$user->email}} |
+						Waktu Penambahan Data User : {{$user->created_at->diffForHumans()}}
 					</p>
 					<p>
 						No Handphone : {{$user->detail->no_handphone}}

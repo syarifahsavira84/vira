@@ -32,6 +32,7 @@
 								<th>No</th>
 								<th>Username</th>
 								<th>Nama</th>
+								<th>Jenis Kelamin</th>
 								<th>Email</th>
 								<th>Produk</th>
 								<th>Action</th>
@@ -43,6 +44,7 @@
 								<td>{{ $loop->iteration}}</td>
 								<td>{{$user->username}}</td>
 								<td>{{$user->nama}}</td>
+								<td>{{$user->jenis_kelamin_string}}</td>
 								<td>{{$user->email}}</td>
 								<td>{{$user->produk_count}}</td>
 								<td>
