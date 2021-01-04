@@ -9,19 +9,23 @@
 					<h3>Detail Data Produk</h3>
 				</div>
 				<div class="card-body">
-					<h3>{{$produk->nama}}</h3>
-					<hr>
-					<p>
-						{{$produk->harga_string}} |
-						Stock : {{$produk->stock}} |
-						Berat : {{$produk->berat}} kg |
-						Size : {{$produk->size}} |
-						Seller : {{$produk->seller->username}} |
-						Tanggal Produk : {{$produk->created_at->diffForHumans()}}
-					</p>
-					<p>
-						{!! nl2br($produk->deskripsi) !!}
-					</p>
+					<div class="row">
+							<div class="col-md-4">
+								<p>
+									<img src="{{url("public/$produk->foto")}}" alt="">
+								</p>
+							</div>
+							<div class="col-md-8">
+								<h3>{{$produk->nama}}</h3>
+								<hr>
+								@include('produk.show.detail')
+								<p>
+									{!! nl2br($produk->deskripsi) !!}
+								</p>
+							</div>
+						</div>
+					<br>
+					
 				</div>
 			</div>
 		</div>

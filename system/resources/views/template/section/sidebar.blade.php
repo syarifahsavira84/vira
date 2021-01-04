@@ -78,7 +78,7 @@
               <li class="nav-item">
                 <a href="{{url('admin/pelanggan')}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pelanggan</p>
+                   Pelanggan
                 </a>
               </li>
             </ul>
@@ -86,7 +86,7 @@
               <li class="nav-item">
                 <a href="{{url('admin/pemasok')}}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pemasok</p>
+                   Pemasok
                 </a>
               </li>
             </ul>

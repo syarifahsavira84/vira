@@ -27,6 +27,8 @@ class ProdukController extends Controller{
 		$produk->deskripsi = request('deskripsi');
 		$produk->save();
 
+		$produk->handleUploadFoto();
+
 		return redirect('admin/produk')->with('success', 'Data berhasil ditambah');
 	}
 	function show(Produk $produk){
@@ -46,6 +48,7 @@ class ProdukController extends Controller{
 		$produk->deskripsi = request('deskripsi');
 		$produk->save();
 
+		$produk->handleUploadFoto();
 		return redirect('admin/produk')->with('success', 'Data berhasil diedit');
 	}
 	function destroy(Produk $produk){

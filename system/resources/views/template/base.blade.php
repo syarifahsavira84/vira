@@ -27,6 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Bootstrap4 Duallistbox -->
   <link rel="stylesheet" href="{{url('public')}}/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
 </head>
+@stack('style')
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
 
@@ -88,6 +89,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap4 Duallistbox -->
 <script src="{{url('public')}}/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
 
+@stack('script')
 <script>
   $(".table-datatable").DataTable();
 </script>
