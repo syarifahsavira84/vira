@@ -9,12 +9,15 @@
 					<h3>Detail Data Produk</h3>
 				</div>
 				<div class="card-body">
+
 					<div class="row">
-							<div class="col-md-4">
-								<p>
-									<img src="{{url("public/$produk->foto")}}" alt="">
-								</p>
+						<div class="col-md-3">
+							<div class="card">
+								<div class="card-body">
+									<img src="{{url("public/$produk->foto")}}" alt="" class="img-fluid">
+								</div>
 							</div>
+						</div>
 							<div class="col-md-8">
 								<h3>{{$produk->nama}}</h3>
 								<hr>

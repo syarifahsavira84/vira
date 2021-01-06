@@ -1,7 +1,6 @@
-@extends('template.base')
-@section('sub-judul', 'Dashboard')
-@section('content')
+@extends('template_client.content')
 
+@section('isi')
 <div class="col-12">
 			
             <center>
@@ -10,5 +9,4 @@
             </center>
 		</div>
 <br>
-        
 @endsection

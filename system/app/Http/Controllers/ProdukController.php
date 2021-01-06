@@ -59,6 +59,7 @@ class ProdukController extends Controller{
 	function filter(){
 		$nama = request('nama');
 		$stock = explode(",", request('stock'));
+		$size = explode(",", request('size'));
 		$data['harga_min'] = $harga_min = request('harga_min');
 		$data['harga_max'] = $harga_max = request('harga_max');
 		// $data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->get();
@@ -78,6 +79,7 @@ class ProdukController extends Controller{
 		$data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->whereBetween('harga', [$harga_min, $harga_max])->get();
 		$data['nama'] = $nama;
 		$data['stock'] = request('stock');
+		$data['size'] = request('size');
 		return view('produk.index', $data);
 	}
 }
