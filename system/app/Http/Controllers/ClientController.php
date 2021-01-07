@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Models\Kategori;
 use App\Models\Promo;
+use App\Models\Provinsi;
 
 class ClientController extends Controller
 {
@@ -43,5 +44,9 @@ class ClientController extends Controller
         $data['list'] = Promo::simplePaginate(2);
         return view('client.promo-collection',$data);
 
+    }
+    function testAjax(){
+        $data['list_provinsi'] = Provinsi::all();
+        return view('client.test-ajax', $data);
     }
 }

@@ -90,9 +90,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{url('public')}}/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
 
 @stack('script')
+
+
 <script>
   $(".table-datatable").DataTable();
 </script>
+
 
 </body>
 </html>

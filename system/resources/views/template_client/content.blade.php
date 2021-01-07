@@ -16,6 +16,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+@stack('style')
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
@@ -78,5 +79,7 @@
 <script src="{{url('public')}}/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{url('public')}}/dist/js/demo.js"></script>
+
+@stack('script')
 </body>
 </html>
