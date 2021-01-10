@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Kategori;
+use App\Http\Requests\KategoriStoreRequest;
 
 class KategoriController extends Controller{
 	function index(){
@@ -13,7 +14,7 @@ class KategoriController extends Controller{
 	function create(){
 		return view('kategori.create');
 	}
-	function store(){
+	function store(KategoriStoreRequest $request){
 		$kategori = new Kategori;
 		$kategori->nama = request('nama');
 		$kategori->brand = request('brand');

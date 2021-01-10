@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\UserDetail;
+use App\Http\Requests\UserStoreRequest;
 
 class UserController extends Controller
 {
@@ -36,8 +37,15 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(UserStoreRequest $request)
     {
+
+       // $validated = request()->validate([
+       //  'nama' => ['required'],
+       //  'username' => ['required'],
+       //  'email' => ['required']
+       // ]);
+
         $user = new User;
         $user->nama = request('nama');
         $user->username = request('username');

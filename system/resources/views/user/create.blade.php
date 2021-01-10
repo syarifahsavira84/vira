@@ -1,13 +1,13 @@
 @extends('template.base')
 @section('content')
 
-@if(count($errors)>0)
+<!-- @if(count($errors)>0)
 	@foreach($errors->all() as $error)
 		<div class="alert alert-danger btn-sm" role="alert">
 			{{$error}}
 		</div>
 	@endforeach
-@endif
+@endif -->
 
 <div class="container">
 	<div class="row">
@@ -17,18 +17,22 @@
 					Tambah Data User
 				</div>
 				<div class="card-body">
+					
 					<form action="{{url('admin/user')}}" method="POST">
 						@csrf
 						<div class="form-group">
 					        <label>Nama</label>
+					        @include('template.utils.errors', ['item'=>'nama'])
 					        <input type="text" class="form-control" name="nama">
 					    </div>
 					    <div class="form-group">
 					        <label>Username</label>
+					        @include('template.utils.errors', ['item'=>'username'])
 					        <input type="text" class="form-control" name="username">
 					    </div>
 					    <div class="form-group">
 					        <label>Email</label>
+					        @include('template.utils.errors', ['item'=>'email'])
 					        <input type="email" class="form-control" name="email">
 					    </div>
 					    <div class="form-group">

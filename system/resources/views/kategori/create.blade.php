@@ -14,18 +14,21 @@
 						@csrf
 						<div class="form-group" >
 							<label for="" class="control-label">Nama</label>
+							@include('template.utils.errors', ['item'=>'nama'])
 							<input type="text" class="form-control" name="nama"></input>
 						</div>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group" >
 									<label for="" class="control-label">Brand</label>
+									@include('template.utils.errors', ['item'=>'brand'])
 									<input type="text" class="form-control" name="brand"></input>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group" >
 									<label for="" class="control-label">Stock</label>
+									@include('template.utils.errors', ['item'=>'stock'])
 									<input type="text" class="form-control" name="stock"></input>
 								</div>
 							</div>

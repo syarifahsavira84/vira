@@ -49,6 +49,17 @@ Route::prefix('admin')->middleware('auth')->group(function(){
 	Route::resource('promo', PromoController::class);
 	Route::resource('user', UserController::class);
 });
+// Route::prefix('admin')->middleware(['auth:pembeli'])->group(function(){
+// 	Route::post('produk/filter', [ProdukController::class, 'filter']);
+// 	Route::post('kategori/filter', [KategoriController::class, 'filter']);
+// 	Route::resource('produk', ProdukController::class);
+// 	Route::resource('product', ProductController::class);
+// 	Route::resource('kategori', KategoriController::class);
+// 	Route::resource('pelanggan', PelangganController::class);
+// 	Route::resource('pemasok', PemasokController::class);
+// 	Route::resource('promo', PromoController::class);
+// 	Route::resource('user', UserController::class);
+// });
 
 Route::get('login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('login', [AuthController::class, 'loginProcess']);
