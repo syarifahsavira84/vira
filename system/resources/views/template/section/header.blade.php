@@ -31,7 +31,7 @@
           <img src="{{url('public/dist/img/user1-128x128.jpg')}}" alt="User Avatar" style="height: 100%;" class="img-circle">
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="{{url('logout')}}" class="dropdown-item">
+          <a href="{{url('setting')}}" class="dropdown-item">
             <i class="fas fa-cogs"></i> Setting
           </a>
           <a href="{{url('logout')}}" class="dropdown-item">

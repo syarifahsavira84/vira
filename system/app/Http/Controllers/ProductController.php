@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
-class ProdukController extends Controller{
+class ProductController extends Controller{
 	function index(){
 		// $id_user = request()->user()->id;
 		$user = request()->user();
@@ -52,7 +52,6 @@ class ProdukController extends Controller{
 		return redirect('admin/produk')->with('success', 'Data berhasil diedit');
 	}
 	function destroy(Product $produk){
-		$produk->handleDelete();
 		$produk->delete();
 
 		return redirect('admin/produk')->with('danger', 'Data berhasil dihapus');
