@@ -24,6 +24,7 @@ class KategoriController extends Controller{
 		return redirect('admin/kategori')->with('success', 'Data berhasil ditambah');
 	}
 	function show(Kategori $kategori){
+
 		$data['kategori'] = $kategori;
 		return view('kategori.show', $data);
 	}
