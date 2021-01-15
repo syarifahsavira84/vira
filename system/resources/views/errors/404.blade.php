@@ -33,6 +33,7 @@
             }
         </script>
     </head>
+    
     <body class="fixed-header error-page">
         <div class="d-flex justify-content-center full-height full-width align-items-center">
             <div class="container text-center">

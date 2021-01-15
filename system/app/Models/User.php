@@ -15,25 +15,25 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     protected $casts = [
-		'created_at' => 'datetime',
-		'updated_at' => 'datetime'
-	];
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
+    ];
 
     function detail(){
-    	return $this->hasOne(UserDetail::class, 'id_user');
+        return $this->hasOne(UserDetail::class, 'id_user');
     }
 
     function produk(){
-    	return $this->hasMany(Produk::class, 'id_user');
+        return $this->hasMany(Produk::class, 'id_user');
     }
     function getJenisKelaminStringAttribute(){
-    	return ($this->jenis_kelamin == 1 ) ? "Laki-laki" : "Perempuan";
+        return ($this->jenis_kelamin == 1 ) ? "Laki-laki" : "Perempuan";
     }
     function setPasswordAttribute($value){
-    	$this->attributes['password'] = bcrypt($value);
+        $this->attributes['password'] = bcrypt($value);
     }
     function setUsernameAttribute($value){
-    	$this->attributes['username'] = strtolower($value);
+        $this->attributes['username'] = strtolower($value);
     }
 
 }
