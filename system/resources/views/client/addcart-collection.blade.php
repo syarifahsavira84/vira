@@ -22,30 +22,31 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Images</th>
-                                    <th>Product Name</th>
-                                    <th>Unit Price </th>
+                                    <th>Gambar</th>
+                                    <th>Nama Product</th>
+                                    <th>Unit Price</th>
                                     <th>Stock</th>
                                     <th>Add Item</th>
-                                    <th>Remove</th>
+                                    <th>Hapus</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($list as $produk)
                                 <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="{{url('public')}}/images/img-pro-01.jpg" alt="" />
+									<img class="img-fluid" src="{{url("public/$produk->foto")}}" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
                                         <a href="#">
-									Lorem ipsum dolor sit amet
+									{{$produk->nama}}
 								</a>
                                     </td>
                                     <td class="price-pr">
-                                        <p>$ 80.0</p>
+                                        <p>{{$produk->harga_string}}</p>
                                     </td>
-                                    <td class="quantity-box">In Stock</td>
+                                    <td class="quantity-box">{{$produk->stock}}</td>
                                     <td class="add-pr">
                                         <a class="btn hvr-hover" href="#">Add to Cart</a>
                                     </td>
@@ -55,54 +56,8 @@
 								</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="{{url('public')}}/images/img-pro-02.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-									Lorem ipsum dolor sit amet
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$ 60.0</p>
-                                    </td>
-                                    <td class="quantity-box">In Stock</td>
-                                    <td class="add-pr">
-                                        <a class="btn hvr-hover" href="#">Add to Cart</a>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="thumbnail-img">
-                                        <a href="#">
-									<img class="img-fluid" src="{{url('public')}}/images/img-pro-03.jpg" alt="" />
-								</a>
-                                    </td>
-                                    <td class="name-pr">
-                                        <a href="#">
-									Lorem ipsum dolor sit amet
-								</a>
-                                    </td>
-                                    <td class="price-pr">
-                                        <p>$ 30.0</p>
-                                    </td>
-                                    <td class="quantity-box">In Stock</td>
-                                    <td class="add-pr">
-                                        <a class="btn hvr-hover" href="#">Add to Cart</a>
-                                    </td>
-                                    <td class="remove-pr">
-                                        <a href="#">
-									<i class="fas fa-times"></i>
-								</a>
-                                    </td>
-                                </tr>
+                                 @endforeach
+                                
                             </tbody>
                         </table>
                     </div>

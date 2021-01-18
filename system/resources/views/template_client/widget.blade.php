@@ -10,6 +10,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="{{url('cart-collection')}}">Cart</a></li>
                                 <li><a href="{{url('cekout-collection')}}">Checkout</a></li>
+                                <li><a href="{{url('addcart-collection')}}">Add Cart</a></li>
 
                             </ul>
                         </li>

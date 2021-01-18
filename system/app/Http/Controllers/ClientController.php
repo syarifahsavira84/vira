@@ -68,7 +68,7 @@ class ClientController extends Controller
         $list_produk = Produk::all();
 
         
-        $data['list'] = Produk::simplePaginate(2);
+        $data['list'] = Produk::simplePaginate(4);
         return view('client.addcart-collection',$data);
 
     }
