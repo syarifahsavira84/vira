@@ -21,20 +21,7 @@
 							<label for="" class="control-label">Diskon</label>
 							<input type="text" name="diskon" class="form-control" value="{{$diskon ?? ""}}">
 						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="" class="control-label">Harga Min</label>
-									<input type="text" name="harga_min" class="form-control" value="{{$harga_min ?? ""}}">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="" class="control-label">Harga Max</label>
-									<input type="text" name="harga_max" class="form-control" value="{{$harga_max ?? ""}}">
-								</div>
-							</div>
-						</div>
+
 						<button class="btn btn-dark float-right btn-sm"><i class="fa fa-search"></i> Filter</button>
 					</form>
 				</div>

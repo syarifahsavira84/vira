@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>VR Collection | Log in</title>
+  <title>Vr Wristwatch | Log in</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="{{url('beranda')}}"><b>VR Collection</b></a>
+    <a href="{{url('beranda')}}"><b>Vr Wristwatch</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -47,12 +47,13 @@
             </div>
           </div>
         </div>
-        <!-- <div class="input-group mb-3">
+        <div class="input-group mb-3">
           <select name="login_as" class="form-control">
-            <option value="1">Pembeli</option>
-            <option value="2">Penjual</option>
+            <option value="2">Admin</option>
+            <option value="1">Penjual</option>
+            <option value="0">Pembeli</option>
           </select>
-        </div> -->
+        </div>
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">

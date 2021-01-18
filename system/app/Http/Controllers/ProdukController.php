@@ -3,7 +3,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Models\Produk;
 
 class ProdukController extends Controller{
 	function index(){
@@ -17,7 +17,7 @@ class ProdukController extends Controller{
 		return view('produk.create');
 	}
 	function store(){
-		$produk = new Product;
+		$produk = new Produk;
 		$produk->id_user = request()->user()->id;
 		$produk->nama = request('nama');
 		$produk->harga = request('harga');
@@ -29,17 +29,17 @@ class ProdukController extends Controller{
 
 		$produk->handleUploadFoto();
 
-		return redirect('admin/produk')->with('success', 'Data berhasil ditambah');
+		return redirect('produk')->with('success', 'Data berhasil ditambah');
 	}
-	function show(Product $produk){
+	function show(Produk $produk){
 		$data['produk'] = $produk;
 		return view('produk.show', $data);
 	}
-	function edit(Product $produk){
+	function edit(Produk $produk){
 		$data['produk'] = $produk;
 		return view('produk.edit', $data);
 	}
-	function update(Product $produk){
+	function update(Produk $produk){
 		$produk->nama = request('nama');
 		$produk->harga = request('harga');
 		$produk->berat = request('berat');
@@ -49,13 +49,13 @@ class ProdukController extends Controller{
 		$produk->save();
 
 		$produk->handleUploadFoto();
-		return redirect('admin/produk')->with('success', 'Data berhasil diedit');
+		return redirect('produk')->with('success', 'Data berhasil diedit');
 	}
-	function destroy(Product $produk){
+	function destroy(Produk $produk){
 		$produk->handleDelete();
 		$produk->delete();
 
-		return redirect('admin/produk')->with('danger', 'Data berhasil dihapus');
+		return redirect('produk')->with('danger', 'Data berhasil dihapus');
 	}
 	function filter(){
 		$nama = request('nama');
@@ -77,7 +77,7 @@ class ProdukController extends Controller{
 		// $data['list_produk'] = Produk::whereMonth('created_at', '11')->whereYear('created_at', '2019')->get();
 		// $data['list_produk'] = Produk::whereTime('created_at', '03:30:22')->get();
 		// $data['list_produk'] = Produk::whereBetween('harga', [$harga_min, $harga_max])->whereNotIn('stock', [10])->whereYear('created_at', '2020')->get();
-		$data['list_produk'] = Product::where('nama', 'like', "%$nama%")->whereBetween('harga', [$harga_min, $harga_max])->get();
+		$data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->whereBetween('harga', [$harga_min, $harga_max])->get();
 		$data['nama'] = $nama;
 		$data['stock'] = request('stock');
 		$data['size'] = request('size');

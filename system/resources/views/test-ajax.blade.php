@@ -1,5 +1,5 @@
-@extends('template.base')
-@section('content')
+@extends('template_client.content')
+@section('isi')
 
 	<div class="container">
 		<div class="row">

@@ -1,4 +1,4 @@
-@extends('template.base')
+@extends('template_penjual.base')
 
 @section('content')
 <div class="container">
@@ -9,7 +9,7 @@
 					<h4>Tambah Data Produk</h4>
 				</div>
 				<div class="card-body">
-					<form action="{{url('admin/produk')}}" method="post" enctype="multipart/form-data">
+					<form action="{{url('produk')}}" method="post" enctype="multipart/form-data">
 						@csrf
 						<div class="form-group" >
 							<label for="" class="control-label">Nama</label>

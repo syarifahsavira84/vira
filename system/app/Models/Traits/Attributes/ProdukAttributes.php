@@ -4,6 +4,7 @@ namespace App\Models\Traits\Attributes;
 
 use Illuminate\Support\Str;
 use App\Models\User;
+use App\Models\Penjual;
 
 trait ProdukAttributes{
 	function getHargaStringAttribute(){

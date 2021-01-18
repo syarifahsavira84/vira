@@ -1,5 +1,5 @@
 @inject('timeService','App\Services\TimeServices')
-@extends('template.base')
+@extends('template_penjual.base')
 
 @section('content')
 
@@ -14,7 +14,7 @@
 					<strong>Filter</strong>
 				</div>
 				<div class="card-body">
-					<form action="{{url('admin/produk/filter')}}" method="post">
+					<form action="{{url('produk/filter')}}" method="post">
 						@csrf
 						<div class="form-group">
 							<label for="" class="control-label">Nama</label>
@@ -24,20 +24,6 @@
 							<label for="" class="control-label">Stock</label>
 							<input type="text" name="stock" class="form-control" value="{{$stock ?? ""}}">
 						</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="" class="control-label">Harga Min</label>
-									<input type="text" name="harga_min" class="form-control" value="{{$harga_min ?? ""}}">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<label for="" class="control-label">Harga Max</label>
-									<input type="text" name="harga_max" class="form-control" value="{{$harga_max ?? ""}}">
-								</div>
-							</div>
-						</div>
 						<button class="btn btn-dark float-right btn-sm"><i class="fa fa-search"></i> Filter</button>
 					</form>
 				</div>
@@ -46,7 +32,7 @@
 			<div class="card">
 				<div class="card-header">
 					<strong>Data Produk</strong>
-					<a href="{{url('admin/produk/create')}}" class="btn btn-dark float-right btn-sm"><i class="fa fa-plus"></i> Tambah Data</a>
+					<a href="{{url('produk/create')}}" class="btn btn-dark float-right btn-sm"><i class="fa fa-plus"></i> Tambah Data</a>
 				</div>
 				<div class="card-body">
 					<table class="table table-datatable">
@@ -68,9 +54,9 @@
 								<td>{{$produk->stock}}</td>
 								<td >
 									<div class="btn-group">
-										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-sm btn-dark"><i class="fa fa-info"></i></a>
-										<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-										@include('template.utils.delete',['url'=>url('admin/produk', $produk->id)])
+										<a href="{{url('produk', $produk->id)}}" class="btn btn-sm btn-dark"><i class="fa fa-info"></i></a>
+										<a href="{{url('produk', $produk->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+										@include('template.utils.delete',['url'=>url('produk', $produk->id)])
 									</div>
 								</td>
 							</tr>

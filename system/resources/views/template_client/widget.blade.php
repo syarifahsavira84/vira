@@ -1,61 +1,38 @@
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="{{url('home')}}" class="brand-link">
-      <img src="{{url('public')}}/dist/img/AdminLTELogo.png"
-           alt="AdminLTE Logo"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">VR Collection</span>
-    </a>
+<div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class="nav-item active"><a class="nav-link" href="{{url('home')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url('about-collection')}}">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url('product-collection')}}">Product</a></li>
+                        
+                        
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{url('cart-collection')}}">Cart</a></li>
+                                <li><a href="{{url('cekout-collection')}}">Checkout</a></li>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{url('public')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">VR Collectioan</a>
-        </div>
-      </div> -->
+                            </ul>
+                        </li>
+                        <li class="nav-item d-none d-sm-inline-block">
+                            <a href="{{url('test-ajax')}}" class="nav-link">Alamat</a>
+                        </li>
+                    </ul>
+                </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          
-         
-         
-         
-          <li class="nav-item">
-            <a href="{{url('produk-collection')}}" class="nav-link">
-              <i class="fab fa-product-hunt"></i>
-              <p>
-                Produk
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{url('kategori-collection')}}" class="nav-link">
-              <i class="fas fa-layer-group"></i>
-              <p>
-                Kategori
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{url('promo-collection')}}" class="nav-link">
-              <i class="fas fa-percent"></i>
-              <p>
-                Promo
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
+
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        <li class="logout"><a href="{{url('logout')}}"><i class="fas fa-sign-out-alt"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>

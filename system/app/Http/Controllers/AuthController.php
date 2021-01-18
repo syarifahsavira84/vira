@@ -17,20 +17,21 @@ class AuthController extends Controller
 	}
 	function loginProcess()
 	{
-		if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
-			return redirect('beranda')->with('success', 'Login anda berhasil');
-		}else{
-			return back()->with('danger','Login gagal, Silakan cek email dan password anda');
-		}
-
-
-		// if(Auth::attempt(['email'=>request('email'),'password'=>request('password')])){
-		// 	$user = Auth::user();
-		// 	if($user-> level == 1) return redirect('beranda/admin')->with('success','Login berhasil');
-		// 	if($user-> level == 0) return redirect('beranda/pengguna')->with('success','Login berhasil');
+		// if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){
+		// 	return redirect('beranda')->with('success', 'Login anda berhasil');
 		// }else{
-		// 	return back()->with('danger','Login gagal,silahkan cek email dan password anda!');
+		// 	return back()->with('danger','Login gagal, Silakan cek email dan password anda');
 		// }
+
+
+		if(Auth::attempt(['email'=>request('email'),'password'=>request('password')])){
+			$user = Auth::user();
+			if($user-> level == 2) return redirect('beranda/admin')->with('success','Login berhasil');
+			if($user-> level == 1) return redirect('dashboard')->with('success','Login berhasil');
+			if($user-> level == 0) return redirect('home')->with('success','Login berhasil');
+		}else{
+			return back()->with('danger','Login gagal,silahkan cek email dan password anda!');
+		}
 
 		// $email = request('email');
 		// $user = Pembeli::where('email', $email)->first();

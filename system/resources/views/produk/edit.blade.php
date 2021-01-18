@@ -1,5 +1,5 @@
 
-@extends('template.base')
+@extends('template_penjual.base')
 
 @section('content')
 <div class="container">
@@ -17,7 +17,7 @@
 					<h4>Edit Data Produk</h4>
 				</div>
 				<div class="card-body">
-					<form action="{{url('admin/produk',$produk->id)}}" method="post" enctype="multipart/form-data">
+					<form action="{{url('produk',$produk->id)}}" method="post" enctype="multipart/form-data">
 						@csrf
 						@method("PUT")
 						<div class="form-group" >
